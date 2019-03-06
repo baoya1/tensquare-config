@@ -1,0 +1,16 @@
+server:
+  port: 9007
+spring:
+  application:
+    name: tensquare-search
+  data:
+    elasticsearch:
+      cluster-nodes: 47.101.173.27:9300
+  rabbitmq:
+    host: 47.101.173.27
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:6868/eureka
+  instance:
+    prefer-ip-address: true

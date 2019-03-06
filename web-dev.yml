@@ -1,0 +1,42 @@
+server:
+  port: 9012
+spring:
+  application:
+    name: tensquare-web
+  rabbitmq:
+    host: 47.101.173.27
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:6868/eureka/
+  instance:
+    prefer-ip-address: true
+zuul:
+  routes:
+    tensquare-search:
+      path: /search/**
+      serviceId: tensquare-search
+    tensquare-article: #文章(名字随便取)
+      path: /article/** #配置路由规则
+      serviceId: tensquare-article #指定Eureka注册中心中的服务id
+    tensquare-base:
+      path: /base/**
+      serviceId: tensquare-base
+    tensquare-friend:
+      path: /friend/**
+      serviceId: tensquare-friend
+    tensquare-gathering:
+      path: /gathering/**
+      serviceId: tensquare-gathering
+    tensquare-qa:
+      path: /qa/**
+      serviceId: tensquare-qa
+    tensquare-recruit:
+      path: /recruit/**
+      serviceId: tensquare-recruit
+    tensquare-spit:
+      path: /spit/**
+      serviceId: tensquare-spit
+    tensquare-user:
+      path: /user/**
+      serviceId: tensquare-user

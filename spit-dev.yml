@@ -1,0 +1,23 @@
+server:
+  port: 9006
+
+spring:
+  application:
+    name: tensquare_spit
+  data:
+    mongodb:
+      host: 47.101.173.27
+      port: 27017
+      database: spitdb
+  redis:
+    host: 47.101.173.27
+    port: 6379
+    password: lty123
+  rabbitmq:
+    host: 47.101.173.27
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:6868/eureka
+  instance:
+    prefer-ip-address: true

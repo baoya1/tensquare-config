@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: tensquare_spit
+    name: tensquare-spit
   data:
     mongodb:
       host: 47.101.173.27
